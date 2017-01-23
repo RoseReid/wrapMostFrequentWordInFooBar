@@ -1,0 +1,27 @@
+<fieldset class ="enterText">
+          <legend>Enter your own text</legend>
+
+      <form id="loginformA" action="/input" method="post">
+    <textarea name="test">enter or paste text here</textarea>
+<input type="submit" value="Submit"></input>
+  </fieldset>
+
+  .enterText {
+  color: blue;
+  float: right;
+  margin-right: 200px; }
+
+
+   //  var wordCounts = { };
+//var words = text.split(/[\s.:><,]+/);
+
+//for(var i = 0; i < words.length; i++)
+    //wordCounts[ words[i]] = (wordCounts[words[i]] || 0) + 1;
+    //console.log(wordCounts)
+
+
+    var wordCounts = { };
+var words = text.toLowerCase().split(/[\s.:><,]+/).sort();
+for(var i = 0; i < words.length; i++)
+( wordCounts[ words[i]] = (wordCounts[words[i]] || 0) + 1)
+console.log(wordCounts)

@@ -1,0 +1,19 @@
+body {
+  background-color: lightyellow;
+  color: pink; }
+
+.chooseWord {
+  color: green;
+  float: center;
+  margin-left: 450px;
+  margin-right: 3450px;
+  margin-bottom: 50px; }
+
+.uploadText {
+  color: red;
+  float: left;
+  margin-left: 200px; }
+
+
+
+/*# sourceMappingURL=stylesheets.css.map */

@@ -1,0 +1,15 @@
+{
+  "name": "presisproject",
+  "version": "1.0.0",
+  "description": "finding the most used word for presis technical interview project",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "node server.js"
+  },
+  "author": "Rose Reid",
+  "license": "ISC",
+  "dependencies": {
+    "express-fileupload": "0.0.6"
+  }
+}
