@@ -17,7 +17,7 @@ for (var i=0; i<words.length; i++)    //select element (current element)
 {
         for (var j=i; j<words.length; j++)   //loop through next elements in array to compare calculate frequency of current element
         {
-                if (words[i] == words[j])    //see if element occurs again in the array
+                if (words[i] == words[j])     //see if element occurs again in the array
                  m++;   //increment counter if it does
                 if (mf<m)   //compare current items frequency with maximum frequency
                 {
