@@ -6,6 +6,7 @@ var m = 0;
 var words = text.toLowerCase().split(/[\s.:><,]+/);
 for(var i = 0; i < words.length; i++)
 ( wordCounts[ words[i]] = (wordCounts[words[i]] || 0) + 1)
+console.log(wordCounts)
 
 var addFooBar = function(){
      replaceText = ("foo"+ wordCounts +"bar");
@@ -17,7 +18,9 @@ var addFooBar = function(){
 
 for (var i=0; i<words.length; i++)    //select element (current element)
 {
-        for (var j=i; j<words.length; j++)   //loop through next elements in array to compare calculate frequency of current element
+   var holder = function()  
+   {   
+       for (var j=i; j<words.length; j++)   //loop through next elements in array to compare calculate frequency of current element
         {
                 if (words[i] == words[j])     //see if element occurs again in the array
                  m++;   //increment counter if it does
@@ -26,10 +29,14 @@ for (var i=0; i<words.length; i++)    //select element (current element)
                   mf=m;      //if m>mf store m in mf for upcoming elements
                   wordCounts = words[i]; 
                 }   
-
+                
             }
-        m=0; 
-        
+   m=0; 
+
+    }
+
+holder()   //I want to be able to call the function while wordcount of longest word is same as other words.
+   
 }
 
 
