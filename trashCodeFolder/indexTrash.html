@@ -25,3 +25,16 @@ var words = text.toLowerCase().split(/[\s.:><,]+/).sort();
 for(var i = 0; i < words.length; i++)
 ( wordCounts[ words[i]] = (wordCounts[words[i]] || 0) + 1)
 console.log(wordCounts)
+
+
+if (words[i] === words[j])     //see if element occurs again in the array
+                 m++;   //increment counter if it does
+                if (mf<m)   //compare current wordCountss frequency with maximum frequency
+                {
+                  mf=m;      //if m>mf store m in mf for upcoming elements
+                  wordCounts = words[i];
+                }  
+            }
+                
+        
+   m=0;
