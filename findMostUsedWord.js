@@ -1,47 +1,45 @@
 module.exports = function(text){
-
-var wordCounts = { };
-var mf = 1;
-var m = 0;
 var words = text.toLowerCase().split(/[\s.:><,]+/);
-for(var i = 0; i < words.length; i++)
-( wordCounts[ words[i]] = (wordCounts[words[i]] || 0) + 1)  //look for array with wordcounts and take the heighest?
 
-console.log(wordCounts)
+//console.log(commonElementArray)
 
-var addFooBar = function(){
-     replaceText = ("foo"+ wordCounts +"bar");
-     var newRegEx= new RegExp('\\b' +wordCounts + '\\b', 'g')
-    return text.replace(newRegEx, replaceText)
-       //console.log(words.splice(words,1,replaceText))
-       
-};
+function findCommonElements() {
+var commonElementArray = [];    // an array to hold the common elements in all the array
+var lookupArray = [words];    // an array to hold the count of each elements in the input elements
 
-for (var i=0; i<words.length; i++)    //select element (current element)
-{
-   var holder = function()  
-   {   
-       for (var j=i; j<words.length; j++)   //loop through next elements in array to compare calculate frequency of current element
-        {
-                if (words[i] == words[j])     //see if element occurs again in the array
-                 m++;   //increment counter if it does
-                if (mf<m)   //compare current wordCountss frequency with maximum frequency
-                {
-                  mf=m;      //if m>mf store m in mf for upcoming elements
-                  wordCounts = words[i]; 
-                }   
-                
+    // iterates through each elements in the array to find the common elements
+    for (var arrayIndex = 0; arrayIndex < words.length; arrayIndex++) {
+        for (var childArrayIndex = 0; childArrayIndex < words[arrayIndex].length; childArrayIndex++) {
+
+            // check whether we have already find the current element
+            if (lookupArray[words[arrayIndex][childArrayIndex]]) {
+
+                // we have already seen this element, so increment count by one
+                lookupArray[words[arrayIndex][childArrayIndex]]++;
+            } else {
+                // this is a new element so set the count to 1
+                lookupArray[words[arrayIndex][childArrayIndex]] = 1;
             }
-   m=0; 
 
+            // check the updated count of the current element in the look up table, if the 
+            // count is same as the number of input arrays, then its a common element
+            if (lookupArray[words[arrayIndex][childArrayIndex]] == words.length) {
+                    var newWord = lookupArray[words[arrayIndex][childArrayIndex]] == words.length;
+                // this is a common element, push it to the array
+                commonElementArray.push(newWord);
+                console.log(commonElementArray)
+                //console.log(commonElementArray)
+                //console.log(childArrayIndex)
+            }
+        }
     }
 
-holder()   //I want to be able to call the function while wordcount of longest word is same as other words.
-   
+      //console.log(commonElementArray);
 }
+    return commonElementArray;
+    console.log(commonElementArray)
 
+return findCommonElements()
 
-
- return addFooBar()
 }
 
