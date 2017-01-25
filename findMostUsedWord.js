@@ -5,7 +5,8 @@ var mf = 1;
 var m = 0;
 var words = text.toLowerCase().split(/[\s.:><,]+/);
 for(var i = 0; i < words.length; i++)
-( wordCounts[ words[i]] = (wordCounts[words[i]] || 0) + 1)
+( wordCounts[ words[i]] = (wordCounts[words[i]] || 0) + 1)  //look for array with wordcounts and take the heighest?
+
 console.log(wordCounts)
 
 var addFooBar = function(){
