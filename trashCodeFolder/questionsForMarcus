@@ -1,0 +1,10 @@
+var person = prompt("Please enter your name", "Harry Potter"); 
+if (person != null) {
+    document.getElementById("demo").innerHTML =  //get Element by Id
+    "Hello " + person + "! How are you today?";
+}
+numArray = [8,6,7]
+function getMaxOfArray(numArray) {
+  return Math.max.apply(null, numArray);
+}
+console.log(getMaxOfArray())
