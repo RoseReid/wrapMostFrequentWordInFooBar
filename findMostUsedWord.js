@@ -15,12 +15,12 @@ for (var i=0; i<words.length; i++)    //select element (current element)
 {
         for (var j=i; j<words.length; j++)   //loop through next elements in array to compare calculate frequency of current element
         {
-                if (words[i] == words[j])     //see if element occurs again in the array
+                if (words[i] === words[j])     //see if element occurs again in the array
                  m++;   //increment counter if it does
         }
         if (mf<m)   //compare current items frequency with maximum frequency
         {
-                mf=m;      //if m>mf store m in mf for upcoming elements
+                mf=m;     //if m>mf store m in mf for upcoming elements
                 items = [];
                 items.push(words[i]);  //to save you do arrayname.push(item)
                 // store the current element.
@@ -29,7 +29,6 @@ for (var i=0; i<words.length; i++)    //select element (current element)
                 items.push(words[i]);             
                         console.log(items)
 
-                // newitem2 = words[i]+ 
         }
         m=0;  
 }
