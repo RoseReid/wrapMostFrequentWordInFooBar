@@ -1,7 +1,7 @@
 module.exports = function(text){
 
 var words= text.split(/[\s.:><,]+/);
-var mf = 1; //default maximum frequency
+var mf = 0; //default maximum frequency
 var m = 0;  //counter
 var items = [];  //to store item with maximum frequency
 var replaceText; //array
