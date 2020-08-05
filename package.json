@@ -10,6 +10,6 @@
   "author": "Rose Reid",
   "license": "ISC",
   "dependencies": {
-    "express-fileupload": "0.0.6"
+    "express-fileupload": "1.1.9"
   }
 }
